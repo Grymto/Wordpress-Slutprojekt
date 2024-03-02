@@ -1,0 +1,86 @@
+header {
+    position: relative;
+    top: 50px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        position: relative;
+        padding: 30px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 90%; /* Adjust the width of the lines as needed */
+            height: 2px; /* Adjust the thickness of the lines as needed */
+            background-color: #000; /* Adjust the color of the lines as needed */
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            top: auto;
+            bottom: 0;
+        }
+
+        li {
+            display: flex;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                margin-right: 10px; /* Add margin between the 'a' elements */
+                position: relative;
+
+                &:hover {
+                    color: green;
+                }
+            }
+        }
+    }
+}
+
+
+.title{
+    position: absolute;
+    top:30px; left: 30px;
+}
+
+.icon-list-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 2px; /* You can adjust the value as needed */
+}
+
+/* Make the list items appear in a row */
+.icon-list {
+    position: absolute;
+    top:45px; right: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Adjust individual list items if needed */
+.icon-list li {
+    margin-left: 20px;
+    margin-right: 10px; /* You can adjust the spacing between items */
+}
+
+.icon-list li :hover{
+    cursor: pointer;
+    color: green;
+}
+
+
+
+
+
