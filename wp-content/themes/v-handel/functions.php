@@ -3,6 +3,11 @@
 require_once("Vite.php");
 
 
+add_action('after_setup_theme', 'theme_setup');
+function theme_setup(){
+    add_theme_support('woocommerce');
+}
+
 
 function enqueue_custom_styles() {
     wp_enqueue_style('custom-styles', get_template_directory_uri() . '/styles.css');
@@ -25,6 +30,13 @@ function icon_list_shortcode() {
    
 }
 add_shortcode('my_icon_list', 'icon_list_shortcode');
+
+
+function add_shortcode_to_single_product() {
+    echo do_shortcode('[my_icon_list]');
+}
+
+add_action('woocommerce_before_single_product', 'add_shortcode_to_single_product');
 
 
 
