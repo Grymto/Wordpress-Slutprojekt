@@ -1,6 +1,5 @@
 header {
-    position: relative;
-    top: 50px;
+    margin-top: 3.5%;
 
     ul {
         display: flex;
@@ -31,6 +30,7 @@ header {
             text-align: center;
 
             a {
+                font-size: 20px;
                 text-decoration: none;
                 color: black;
                 list-style: none;
@@ -52,6 +52,8 @@ header {
     position: absolute;
     top:30px; left: 30px;
 }
+
+//icons
 
 .icon-list-container {
     display: flex;
@@ -78,6 +80,30 @@ header {
 .icon-list li :hover{
     cursor: pointer;
     color: green;
+}
+
+
+//usp
+
+.usp-line-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.1%; /* Adjust the margin as needed */
+}
+
+.usp-item {
+    text-align: center;
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    font-size: 12px;
+    font-size: 13px;
+}
+
+.usp-item img {
+    height: 30px;
+    width: 20px; /* Adjust the image width as needed */
+    margin-right: 30px; /* Adjust the margin between image and text */
 }
 
 

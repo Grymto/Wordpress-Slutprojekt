@@ -4,4 +4,7 @@
 @import '_variables.scss';
 body {
     padding: $padding;
+    min-height: 250vh !important;
+    
+
 }

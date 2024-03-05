@@ -26,3 +26,31 @@ function icon_list_shortcode() {
 }
 add_shortcode('my_icon_list', 'icon_list_shortcode');
 
+
+
+
+function usp_line_shortcode() {
+    ob_start(); ?>
+
+<div class="usp-line-container">
+        <div class="usp-item">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/images/delivery.png" alt="Icon 1">
+            <p>FREE SHIPPING</p>
+        </div>
+
+        <div class="usp-item">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/images/moneyback.png" alt="Icon 1">
+            <p>100% MONEY BACK</p>
+        </div>
+
+        <div class="usp-item">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/images/support.png" alt="Icon 1">
+            <p>SUPPORT 24/7</p>
+        </div>
+    </div>
+
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('usp_line', 'usp_line_shortcode');
