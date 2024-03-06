@@ -40,7 +40,26 @@ body{
     border: solid 1px;
 }
 
+.has-text-align-center.para1.has-medium-font-size{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
+.has-text-align-center.para2.has-text-color.has-link-color.has-x-large-font-size.wp-elements-4a06f570cf9151cc577517f0a78f2a45{
+    position: absolute;
+    top: 25%;
+    left: 45%;
+}
+
+.has-text-align-center.para3.has-text-color.has-link-color.has-x-large-font-size.wp-elements-746508e1e9899fefa33fa017b5ab80a0{
+    position: absolute;
+    top: 35%;
+    left: 45%;
+}
+
 .has-text-align-center.Button{
+    position: absolute;
     font-size: 15px;
     font-weight: bold;
     border: solid 1px;
@@ -49,6 +68,8 @@ body{
     height: 50px;
     text-align: center;
     line-height: 50px;
+    left: 45%;
+    top: 61%;
 }
 
 
