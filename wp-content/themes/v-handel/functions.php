@@ -18,15 +18,16 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 function icon_list_shortcode() {
     ?>
-    <div class="icon-list-container">
-        <h2 class="title" >MOODY STUDIO</h2>
-        <ul class="icon-list">
-            <li><img src="/wp-content/themes/v-handel/resources/images/Vector.png" alt="vector" /></li>
-            <li><img src="/wp-content/themes/v-handel/resources/images/gubbe.png" alt="gubbe" /></li>
-            <li><img src="/wp-content/themes/v-handel/resources/images/varukorg.png" alt="varukorg" /></li>
-            <li><img src="/wp-content/themes/v-handel/resources/images/hjärta.png" alt="hjärta" /></li>
-        </ul>
-    </div>
+<div class="icon-list-container">
+    <h2 class="title">MOODY STUDIO</h2>
+    <ul class="icon-list">
+        <li><img src="/wp-content/themes/v-handel/resources/images/Vector.png" alt="vector" /></li>
+        <li><img src="/wp-content/themes/v-handel/resources/images/gubbe.png" alt="gubbe" /></li>
+        <li><a href="https://wordpress-slutprojekt.test/cart/"><img src="/wp-content/themes/v-handel/resources/images/varukorg.png" alt="varukorg" /></a></li>
+        <li><img src="/wp-content/themes/v-handel/resources/images/hjärta.png" alt="hjärta" /></li>
+    </ul>
+</div>
+
     <?php
    
 }
@@ -84,10 +85,12 @@ function custom_shortcode_function($atts) {
     ob_start(); // Start output buffering
 
     ?>
-    <div class="custom-shortcode">
+    <div class="custom-shortcode2">
+        <div class="inputtext">
         <h2>SIGN UP FOR THE NEWSLETTER</h2>
-        <p>Subscribe for the latest stories and promotions</p>
-        <input type="text" placeholder="<?php echo esc_attr($atts['placeholder']); ?>">
+        <p >Subscribe for the latest stories and promotions</p>
+        </div>
+        <input class="inputfeld" type="text" placeholder="<?php echo esc_attr($atts['placeholder']); ?>">
         <div class="icon-wrapper">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/images/moneyback.png" alt="Icon 1">
         </div>
@@ -98,3 +101,14 @@ function custom_shortcode_function($atts) {
 }
 
 add_shortcode('custom_shortcode', 'custom_shortcode_function');
+
+
+//shipping
+
+function enqueue_custom_script() {
+    if (is_checkout() && !is_wc_endpoint_url()) {
+        wp_enqueue_script('custom-checkout-script', get_template_directory_uri() . '/js/app.js', array('jquery'), null, true);
+    }
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');

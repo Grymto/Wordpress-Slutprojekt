@@ -34,6 +34,69 @@ body{
 
 }
 
+//homepage 
+
+// products
+.wp-block-group.is-content-justification-center.is-layout-flex.wp-container-core-group-layout-6.wp-block-group-is-layout-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Set the width of each item to one-third of the container width */
+.wp-block-group.is-content-justification-center.is-layout-flex.wp-container-core-group-layout-6.wp-block-group-is-layout-flex > * {
+    flex: 0 0 calc(20% - 10px); /* Adjust the percentage and subtract any margin/padding as needed */
+    margin: 5px; /* Add margin for spacing between items */
+}
+
+.wp-block-group.is-vertical.is-content-justification-left.is-layout-flex.wp-container-core-group-layout-12.wp-block-group-is-layout-flex{
+    background-color: white;
+    opacity: 80%;
+    margin-left: 20%;
+    margin-top: 25%;
+}
+
+.wp-block-heading{
+    margin-top: 3%;
+}
+
+.wc-block-grid__products{
+    margin-top: 3% !important;
+}
+
+
+// input
+.custom-shortcode2 {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputfeld {
+    margin-left: 23%;
+    width: 370px !important;
+    height: 42px;
+    margin-top: 27px;
+}
+
+.icon-wrapper {
+    background-color: black;
+    padding: 10px;
+    margin-top: 25px;
+    height: 30px;
+    width: 40px;
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+}
+
+.inputtext {
+    margin-left: 10%;
+}
+
+
+
+
+
 //banner and text och knapp
 .banner{
     width: 100%;
@@ -71,6 +134,48 @@ body{
     left: 45%;
     top: 61%;
 }
+
+
+// single-product page
+
+
+.wp-post-image{
+    width: 400px !important;
+    height: 400px !important;
+    margin-left: 60%;
+    padding: 0px;
+    cursor: none;
+}
+
+.custom-review-content{
+    margin-left: 20%;
+    width: 50%;
+    padding: 20px;
+    background-color: whitesmoke;
+    
+}
+.tabs.wc-tabs .reviews_tab a:before {
+    content: none; /* Set content to none to hide the label */
+}
+
+.summary.entry-summary{
+    position: absolute;
+    left: 65%;
+}
+
+.products.columns-4{
+    width: 1000px;
+    margin-left: 22% !important;
+}
+
+.woocommerce-tabs.wc-tabs-wrapper{
+    display: none;
+}
+.product_meta{
+    display: none;
+}
+
+
 
 
 
