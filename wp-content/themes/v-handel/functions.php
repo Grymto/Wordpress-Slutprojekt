@@ -67,3 +67,34 @@ function usp_line_shortcode() {
 }
 
 add_shortcode('usp_line', 'usp_line_shortcode');
+
+
+
+function custom_shortcode_function($atts) {
+    // Extract shortcode attributes
+    $atts = shortcode_atts(
+        array(
+            'placeholder' => 'Enter your text',
+            'icon_image' => 'default-icon.png', // Default image name
+        ),
+        $atts,
+        'custom_shortcode'
+    );
+
+    ob_start(); // Start output buffering
+
+    ?>
+    <div class="custom-shortcode">
+        <h2>SIGN UP FOR THE NEWSLETTER</h2>
+        <p>Subscribe for the latest stories and promotions</p>
+        <input type="text" placeholder="<?php echo esc_attr($atts['placeholder']); ?>">
+        <div class="icon-wrapper">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/images/moneyback.png" alt="Icon 1">
+        </div>
+    </div>
+    <?php
+
+    return ob_get_clean(); // End and return output buffer
+}
+
+add_shortcode('custom_shortcode', 'custom_shortcode_function');
